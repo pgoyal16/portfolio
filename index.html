@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/assets/image.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("lmbZEQmk38LABCL0i");
+         })();
+         function submitForm() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            emailjs.send("service_wna0bk7", "template_7h159ms", {
+                from_name: name,
+                from_email: email,
+                phone_number: phone,
+                user_message: message
+            })
+            .then(function(response) {
+               console.log("SUCCESS!", response.status, response.text);
+               alert("Your message has been sent successfully!");
+               document.getElementById("contform").reset();
+            }, function(error) {
+               console.log("FAILED...", error);
+               alert("Failed to send the message. Please try again later.");
+            });
+        }
+    </script>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#About">Home</a>
+        <a href="#Qualifications">Qualifications</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Contact">Contact me</a>
+    </nav>
+    <section id="About">
+        <div class="about">
+            <div>
+                <img src="/assets/image.png" alt="Profile Picture"  />
+            </div>
+            <div>
+                <h1>PALAK GOYAL</h1>
+                <p style="font-weight: 200;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, laudantium maiores! Numquam aliquam ab magni. Optio maiores rerum sequi, maxime reiciendis, ipsum quibusdam exercitationem fuga ut molestiae magnam debitis aspernatur?</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="Qualifications">
+        <div id="Educational">
+            <h1>Educational Qualifications</h1>
+            <br><br><br>
+            <table id="educationaltable">
+                <tr>
+                    <th>YEAR</th>
+                    <th>INSTITUTE & COURSE DETAILS</th>
+                    <th>PERCENTAGE</th>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>St. Joseph's High School, Matigara<br/><i>10th ICSE</i></td>
+                    <td>92.8%</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>St. Joseph's High School, Matigara<br/><i>12th Commerce</i></td>
+                    <td>94.25%</td>
+                </tr>
+                <tr>
+                    <td>2024 - 2028</td>
+                    <td>CHRIST [Deemed to be University] YPR Campus<br/><i>BCA (with Hons)</i></td>
+                    <td>
+                        <ul>
+                            <li>I Sem - NA</li>
+                            <li>II Sem - NA</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Professional">
+            <h1>Professional Qualifications</h1>
+            <br><br><br>
+            <table id="professionaltable">
+                <tr>
+                    <th>TITLE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <tr>
+                    <td>Professional Qualification</td>
+                    <td>Lorem, ipsum dolor.
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quidem beatae nam nemo tempora omnis.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Qualifications</td>
+                    <td>
+                        <ul>
+                            <li>Led various group projects and assignments.</li>
+                            <li>Actively participated & managed in organizing school events.</li>
+                            <li> Collaborated with peers to improve academic performance.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <hr>
+    <section id="Experience">
+        <h1>Experience</h1>
+        <div class="experience">
+        </div>
+    </section>
+    <hr>
+    <section id="Skills">
+        <div id="Softskills">
+            <h1>Soft Skills</h1>
+            <br><br><br>
+            <table id="softtable">
+                <tr>
+                    <td>1.</td>
+                    <td>Active & Self Learning</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Team Management</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Leadership</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Problem-Solving</td>
+                </tr>
+            </table>
+        </div>
+        <div id="Hardskills">
+            <h1>Hard Skills</h1>
+            <br><br><br>
+            <table id="hardtable">
+                <tr>
+                    <td>1.</td>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>JavaScript</td>
+                </tr>
+            </table>
+        </div>
+        <div id="Interests">
+            <h1>Interests</h1>
+            <br><br><br>
+            <table id="hobbytable">
+                <tr>
+                    <td>1.</td>
+                    <td>Coding</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Exploring & Learning New Things</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Sleeping</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Scrolling Instagram</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <hr>
+    <section id="Contact">
+        <div id="cont">
+            <h1>Get in touch!</h1>
+            <form id="contform" action="javascript:submitForm();">
+                <input type="text" name="name" id="name" placeholder="Enter your name *" required>
+                <input type="number" name="phone" id="phone" placeholder="Enter your phone number *" required>
+                <input type="email" name="email" id="email" placeholder="Enter your mail *" required>
+                <textarea name="message" id="message" placeholder="Enter your message *" required></textarea>
+                <button type="submit" value="submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
